@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>More Events</title>
+  </head>
+  <body>
+    <h1>Explore More Events</h1>
+    <button id="events">Events</button>
+    <input id="value" type="text" />
+
+    <script>
+      //   document.getElementById("value").addEventListener("focus", function () {
+      //     console.log("Hello,input text paisi.");
+      //   });
+      //   document.getElementById("value").addEventListener("blur", function () {
+      //     console.log("Hello,blurr paisi.");
+      //   });
+
+      //   type er khere 3 doroner event hoi.
+
+      document
+        .getElementById("value")
+        .addEventListener("keyup", function (event) {
+          console.log(event.target.value);
+        });
+      document
+        .getElementById("events")
+        .addEventListener("mousemove", function () {
+          console.log("butoon ki paise?");
+        });
+    </script>
+  </body>
+</html>

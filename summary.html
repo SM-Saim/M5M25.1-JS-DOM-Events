@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Events</title>
+  </head>
+  <body>
+    <h1>Make DOM Events</h1>
+    <!-- Event handler 2 vabe add kora jai. -->
+    <!-- 1.function call kore. //(Byusing an event handler)  -->
+    <!-- 2.kono ekta id call kore jar modde event listener thake //(By adding event listener)-->
+
+    <!-- Option-1 -->
+    <button onclick="makeGreen()">Make Green</button>
+
+    <!-- Option-2 -->
+    <button id="makeRed">Make Red</button>
+    <br />
+    <br />
+    <input type="email" name="" id="makeEmail" />
+
+    <script>
+      // Option 1
+      function makeGreen() {
+        document.body.style.backgroundColor = "Green";
+      }
+      // Option 2
+      //  function er naam dea optional.
+      document.getElementById("makeRed").addEventListener("click", function () {
+        document.body.style.backgroundColor = "red";
+      });
+
+      // keyup events
+      document
+        .getElementById("makeEmail")
+        .addEventListener("keyup", function (event) {
+          console.log(event.target.value);
+        });
+
+      // *ki ki type kortei eta paite hoile, function er modde event likte hoi.
+      // target mane jeta k click korsi ,seita.
+      // value: input e ki type kortesi oi value ta.
+    </script>
+  </body>
+</html>

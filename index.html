@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS DOM Events</title>
+  </head>
+  <body>
+    <h1 onclick="console.log('I am clicked')">DOM e ajke events</h1>
+    <button onclick="console.log(7)">Click Here</button>
+    <button onclick="console.log(10)">Another Button</button>
+    <br />
+    <!-- Event handeler kono ekta button er sathe add korar options:  -->
+
+    <!-- Option:1 -->
+    <!-- Direct onclick er modde event handeler add kora, eta temon ekta use korbo na -->
+    <button onclick="document.body.style.backgroundColor='yellow'">
+      Make Yellow
+    </button>
+
+    <!-- Option:2 -->
+    <button onclick="makeSteelBlue()">Make steelblue</button>
+
+    <!-- Option:3 -->
+    <button id="makeGreen">Make Green</button>
+    <!-- Option:3 (another)  -->
+    <button id="makePurple">Make Purple</button>
+
+    <!-- Option: 4 -->
+    <button id="makePink">Make Pink</button>
+
+    <!-- Option:4 another (same as 4, just calling function directly) -->
+    <button id="makeGray">Make Gray</button>
+
+    <!-- Option:4 Final (Direct implement korbo, kono variable chara, ) -->
+    <button id="makeOrange">Make Orange</button>
+
+    <script></script>
+    <script src="js/events.js"></script>
+  </body>
+</html>

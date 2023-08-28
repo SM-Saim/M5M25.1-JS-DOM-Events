@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore Deligate</title>
+  </head>
+  <body>
+    <h1>Explore Event Deligate</h1>
+    <ul id="ulValue">
+      <li class="item">Lorem, ipsum dolor.</li>
+      <li class="item">dolor Possimus,.</li>
+      <li class="item">Lorem, ipsum dolor.</li>
+      <li class="item">sit amet elit.</li>
+      <li class="item">consectetur, adipisicing</li>
+      <li class="item">Lorem ipsum accusantium.</li>
+    </ul>
+    <button id="valueButton">Add Item</button>
+    <script>
+      // Removing Item
+
+      //   const valueAll = document.getElementsByClassName("item");
+      //   for (const item of valueAll) {
+      //     item.addEventListener("click", function (event) {
+      //       event.target.parentNode.removeChild(event.target); //mane jei event e click korsi okei delete korbo
+      //     });
+      //   }
+
+      document
+        .getElementById("ulValue")
+        .addEventListener("click", function (event) {
+          event.target.parentNode.removeChild(event.target);
+        });
+      // Note: ekan theke amra, bujte pari je event ta jodi parent e deligate kora thake ,taile new iteem add ba remove korte kono somossa hobe na, kintu parent e na hoea jodi child e deligate ba pathato hoito, taile new elelemt ad kore ar take remove kora possible hoirto na.
+      // Adding item
+      document
+        .getElementById("valueButton")
+        .addEventListener("click", function () {
+          const value44 = document.getElementById("ulValue");
+
+          const li = document.createElement("li");
+          li.innerText = "Hello, New text is added ";
+          li.classList.add("item"); //eta add korsi exixting iteem gular sathe clas name same thakr jono
+          value44.appendChild(li);
+        });
+    </script>
+  </body>
+</html>

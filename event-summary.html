@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS DOM Summary</title>
+  </head>
+  <body>
+    <h1>Final DOM Event Handlers</h1>
+
+    <h2 id="textToChange">Input before Update</h2>
+    <input type="text" id="inputPlace" />
+    <button id="buttonOfInput">Update</button>
+    <br />
+    <br />
+
+    <h2 id="h2Tag">Dafult Text</h2>
+    <button ondblclick="changeOnClick()">
+      Handle event by add on click function
+    </button>
+    <button id="button">Handle Event by add event listener</button>
+
+    <script>
+      function changeOnClick() {
+        const value = document.getElementById("h2Tag");
+        value.innerText = "Now Dafult Text is Changed";
+      }
+      // Option 2
+      document.getElementById("button").addEventListener("click", function () {
+        const value2 = document.getElementById("h2Tag");
+        value2.innerText = "Inner Text is changed with addEvent listener";
+      });
+
+      //   Option 2 another one
+      document
+        .getElementById("buttonOfInput")
+        .addEventListener("click", function () {
+          const valueofInput = document.getElementById("inputPlace");
+          const inputTaken = valueofInput.value;
+
+          const finalOutput = document.getElementById("textToChange");
+          finalOutput.innerText = inputTaken;
+          inputPlace.value = "";
+        });
+    </script>
+  </body>
+</html>
